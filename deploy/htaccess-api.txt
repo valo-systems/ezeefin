@@ -1,0 +1,10 @@
+# public_html/api/.htaccess — rename to ".htaccess" when deploying
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L,QSA]
+
+# Never serve these directly
+<FilesMatch "^(config.*\.php|.*\.sql)$">
+  Require all denied
+</FilesMatch>
+RedirectMatch 403 ^/api/(src|sql|config|storage)/
