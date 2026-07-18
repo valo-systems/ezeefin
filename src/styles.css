@@ -209,7 +209,15 @@ nav.main > .nav-cta {
 .hero2 h1 { max-width: 830px; font-size: clamp(3.6rem, 7vw, 7.2rem); }
 .hero2 .eyebrow, .eyebrow-light { display: inline-flex; align-items: center; gap: 11px; font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--grey); margin-bottom: 16px; }
 .hero2 .eyebrow { color: #d8d0c7; }
-.hero2 .eyebrow::before, .eyebrow-light::before { content: ""; width: 28px; height: 2px; background: var(--red); flex: none; }
+.hero2 .eyebrow::before, .eyebrow-light::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: var(--red);
+  border-radius: 1px;
+  transform: rotate(45deg);
+  flex: none;
+}
 .hero2 .lede2 { font-size: clamp(1.05rem, 1.4vw, 1.24rem); color: #d4cec7; max-width: 570px; }
 .hero2 .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
 .hero-badges { display: flex; gap: 10px; margin-top: 30px; flex-wrap: wrap; }
